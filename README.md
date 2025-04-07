@@ -1,6 +1,8 @@
-# 🌿 Classificação de Doenças em Folhas com VGG16 + Grad-CAM
+# 🌿 Classificação de Doenças em lavouras de milho
 
-Este projeto utiliza a arquitetura **VGG16** com fine-tuning, regularização, pooling duplo, camada de atenção densa e diversas técnicas como **data augmentation** para classificar imagens de folhas em quatro classes:
+Este projeto utiliza uma rede VGG16 com fine-tuning, regularização, pooling duplo, camada de atenção densa e diversas técnicas como **data augmentation**. 
+Além disso, esse projeto utiliza **Grad-CAM** para gerar visualizações interpretáveis das regiões mais importantes da imagem que influenciaram a decisão da rede. 
+A rede foi treinada para classificar imagens de folhas em quatro classes:
 
 <div style="display: flex; justify-content: center;">  
 	<table style="border-collapse: collapse; width: 60%; text-align: center; font-size: 16px;">  
@@ -43,13 +45,21 @@ datasets/
 │   └── queima_do_norte/
 ```
 
-Além disso, esse projeto utiliza **Grad-CAM** para gerar visualizações interpretáveis das regiões mais importantes da imagem que influenciaram a decisão da rede.
-
 ---
 
 ## Resultados
 
 O modelo obteve **altíssima acurácia**, com excelente desempenho nas métricas de validação. Também foram geradas **matrizes de confusão** e **exemplos visuais preditivos** para avaliar qualitativamente o modelo.
+
+### Prediçôes de validação
+<p align="center">
+ <img src="https://github.com/phaa/corn-diseases-detection/blob/main/dev/images/predicoes.png" title="book" width="800" />
+</p>
+
+### Relatório de classificaçâo e matriz de confusão 
+<p align="center">
+ <img src="https://github.com/phaa/corn-diseases-detection/blob/main/dev/images/resultados.png" title="book" width="800" />
+</p>
 
 ---
 
