@@ -56,7 +56,7 @@ O modelo obteve **altíssima acurácia**, com excelente desempenho nas métricas
  <img src="https://github.com/phaa/corn-diseases-detection/blob/main/dev/images/predicoes.png" title="book" width="800" />
 </p>
 
-### Relatório de classificaçâo e matriz de confusão 
+### Relatório de classificação e matriz de confusão 
 <p align="center">
  <img src="https://github.com/phaa/corn-diseases-detection/blob/main/dev/images/resultados.png" title="book" width="800" />
 </p>
@@ -65,14 +65,14 @@ O modelo obteve **altíssima acurácia**, com excelente desempenho nas métricas
 
 ## Tecnologias e Técnicas Usadas
 
-- ✅ VGG16 pré-treinada (ImageNet)
-- ✅ Fine-tuning das camadas finais
-- ✅ Data Augmentation com `ImageDataGenerator`
-- ✅ Pooling duplo (Average + Max)
-- ✅ Regularização L2 + BatchNormalization
-- ✅ Camadas de Atenção Densa
-- ✅ Grad-CAM para interpretação visual
-- ✅ Visualização com OpenCV e Matplotlib
+- VGG16 pré-treinada (ImageNet)
+- Fine-tuning das camadas finais
+- Data Augmentation com `ImageDataGenerator`
+- Pooling duplo (Average + Max)
+- Regularização L2 + BatchNormalization
+- Camadas de Atenção Densa
+- Grad-CAM para interpretação visual
+- Visualização com OpenCV e Matplotlib
 
 ---
 
@@ -107,7 +107,10 @@ conda activate env
 jupyter lab
 ```
 
-## 📚 Créditos
+### 4. Execute o notebook
+Todas as dependencias são instaladas diretamente pelo notebook
+
+## Créditos
 
 Desenvolvido com ❤️ por <a href='https://www.linkedin.com/in/pedro-henrique-amorim-de-azevedo/' target='_blank'>Pedro Henrique Amorim de Azevedo</a>
 
