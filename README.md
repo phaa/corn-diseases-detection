@@ -16,18 +16,21 @@ A rede foi treinada para classificar imagens de folhas em quatro classes:
 		</tr>  
 		<tr style="background-color: #f9f9f9;">  
 			<td style="border: 1px solid #ddd; padding: 10px;">cercospora</td>  
-			<td style="border: 1px solid #ddd; padding: 10px;">Mancha Cinzenta da Folha (*Cercospora zeae-maydis*).</td>  
+			<td style="border: 1px solid #ddd; padding: 10px;">Mancha Cinzenta da Folha (Cercospora zeae-maydis).</td>  
 		</tr>  
 		<tr>  
 			<td style="border: 1px solid #ddd; padding: 10px;">ferrugem</td>  
-			<td style="border: 1px solid #ddd; padding: 10px;">Ferrugem do Milho (*Puccinia sorghi* ou *Puccinia polysora*).</td>  
+			<td style="border: 1px solid #ddd; padding: 10px;">Ferrugem do Milho (Puccinia sorghi ou Puccinia polysora).</td>  
 		</tr>  
 		<tr style="background-color: #f9f9f9;">  
 			<td style="border: 1px solid #ddd; padding: 10px;">queima_do_norte</td>  
-			<td style="border: 1px solid #ddd; padding: 10px;">Queima do Norte (*Exserohilum turcicum*).</td>  
+			<td style="border: 1px solid #ddd; padding: 10px;">Queima do Norte (Exserohilum turcicum).</td>  
 		</tr>  
 	</table>  
 </div>   
+
+---
+
 
 ### Estrutura do dataset
 
@@ -47,11 +50,18 @@ datasets/
 
 ---
 
+### Distribuição do dataset
+<p align="center">
+ <img src="https://github.com/phaa/corn-diseases-detection/blob/main/dev/images/distribuicao.png" title="book" width="800" />
+</p>
+
+---
+
 ## Resultados
 
 O modelo obteve **altíssima acurácia**, com excelente desempenho nas métricas de validação. Também foram geradas **matrizes de confusão** e **exemplos visuais preditivos** para avaliar qualitativamente o modelo.
 
-### Prediçôes de validação
+### Predições de validação
 <p align="center">
  <img src="https://github.com/phaa/corn-diseases-detection/blob/main/dev/images/predicoes.png" title="book" width="800" />
 </p>
@@ -63,7 +73,7 @@ O modelo obteve **altíssima acurácia**, com excelente desempenho nas métricas
 
 ---
 
-## Tecnologias e Técnicas Usadas
+## Técnicas Usadas
 
 - VGG16 pré-treinada (ImageNet)
 - Fine-tuning das camadas finais
@@ -74,9 +84,7 @@ O modelo obteve **altíssima acurácia**, com excelente desempenho nas métricas
 - Grad-CAM para interpretação visual
 - Visualização com OpenCV e Matplotlib
 
----
-
-**Requisitos principais:**
+**Tecnologias principais:**
 - TensorFlow
 - Keras
 - NumPy
@@ -85,6 +93,17 @@ O modelo obteve **altíssima acurácia**, com excelente desempenho nas métricas
 - Matplotlib
 
 ---
+
+## ✅ Aplicações
+Esse projeto demonstra como a Visão Computacional aliada ao Deep Learning pode melhorar a produtividade, reduzir o uso de defensivos incorretamente e minimizar perdas por doenças.
+
+- Agricultura de Precisão
+- Monitoramento automatizado por drones
+- Prescrição de defensivos agrícolas corretos
+- Mitigar erros de diagnóstico por humanos
+
+---
+
 
 ## Como executar
 
