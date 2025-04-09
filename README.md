@@ -110,8 +110,8 @@ Esse projeto demonstra como a Visão Computacional aliada ao Deep Learning pode 
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/nome-do-repo.git
-cd nome-do-repo
+git clone https://github.com/phaa/corn-diseases-detection.git
+cd corn-diseases-detection
 ```
 
 ### 2. Inicie seu ambiente
