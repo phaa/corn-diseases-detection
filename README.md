@@ -1,6 +1,6 @@
 # 🌿 Classificação de Doenças em lavouras de milho
 
-**Ao longo do notebook do projeto, deixo vários comentários com insights e comentários a respeito das escolhas feitas ao longo do projeto e como elas impactam a solução.**
+**Ao longo do Jupyter notebook do projeto, deixo vários comentários com insights e comentários a sobre das técnicas e metodologias utilizadas e como elas impactam a solução.**
 
 Este projeto utiliza uma rede VGG16 com fine-tuning, regularização, pooling duplo, camada de atenção densa e diversas técnicas como **data augmentation**. 
 Além disso, esse projeto utiliza **Grad-CAM** para gerar visualizações interpretáveis das regiões mais importantes da imagem que influenciaram a decisão da rede. 
@@ -76,7 +76,7 @@ O modelo obteve **altíssima acurácia**, com excelente desempenho nas métricas
 ---
 
 ## Técnicas Usadas
-**Ao longo do notebook do projeto, deixo vários comentários com insights e comentários a respeito das escolhas feitas ao longo do projeto e como elas impactam a solução.**
+**Ao longo do Jupyter notebook do projeto, deixo vários comentários com insights e comentários a sobre das técnicas e metodologias utilizadas e como elas impactam a solução.**
 
 - VGG16 pré-treinada (ImageNet)
 - Fine-tuning das camadas finais
