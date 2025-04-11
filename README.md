@@ -74,6 +74,7 @@ O modelo obteve **altíssima acurácia**, com excelente desempenho nas métricas
 ---
 
 ## Técnicas Usadas
+**Ao longo do projeto, deixo vários comentários com insights e comentários a respeito das escolhas feitas ao longo do projeto e como elas impactam a solução.**
 
 - VGG16 pré-treinada (ImageNet)
 - Fine-tuning das camadas finais
