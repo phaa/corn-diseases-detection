@@ -1,60 +1,59 @@
-# 🌿 Classificação de Doenças em lavouras de milho
+# Disease Classification in Corn Crops
 
-**Ao longo do Jupyter notebook do projeto, deixo vários comentários com insights e comentários a sobre das técnicas e metodologias utilizadas e como elas impactam a solução.**
+**Throughout the project Jupyter notebook, I provide detailed comments with insights and explanations about the techniques and methodologies used and how they impact the solution.**
 
-Este projeto utiliza uma rede VGG16 com fine-tuning, regularização, pooling duplo, camada de atenção densa e diversas técnicas como **data augmentation**. 
-Além disso, esse projeto utiliza **Grad-CAM** para gerar visualizações interpretáveis das regiões mais importantes da imagem que influenciaram a decisão da rede. 
-A rede foi treinada para classificar imagens de folhas em quatro classes:
+This project uses a VGG16 network with fine-tuning, regularization, dual pooling, dense attention layers, and several techniques such as **data augmentation**.  
+Additionally, this project employs **Grad-CAM** to generate interpretable visualizations highlighting the most important image regions that influenced the network’s decision.  
+The network was trained to classify leaf images into four classes:
 
 <div style="display: flex; justify-content: center;">  
 	<table style="border-collapse: collapse; width: 60%; text-align: center; font-size: 16px;">  
 		<tr style="background-color: #f2f2f2;">  
-			<th style="border: 1px solid #ddd; padding: 10px;">Classe</th>  
-			<th style="border: 1px solid #ddd; padding: 10px;">Descrição</th>  
+			<th style="border: 1px solid #ddd; padding: 10px;">Class</th>  
+			<th style="border: 1px solid #ddd; padding: 10px;">Description</th>  
 		</tr>  
 		<tr>  
-			<td style="border: 1px solid #ddd; padding: 10px;">saudavel</td>  
-			<td style="border: 1px solid #ddd; padding: 10px;">Folhas de milho sem sinais visíveis de doenças.</td>  
+			<td style="border: 1px solid #ddd; padding: 10px;">healthy</td>  
+			<td style="border: 1px solid #ddd; padding: 10px;">Corn leaves with no visible signs of disease.</td>  
 		</tr>  
 		<tr style="background-color: #f9f9f9;">  
 			<td style="border: 1px solid #ddd; padding: 10px;">cercospora</td>  
-			<td style="border: 1px solid #ddd; padding: 10px;">Mancha Cinzenta da Folha (Cercospora zeae-maydis).</td>  
+			<td style="border: 1px solid #ddd; padding: 10px;">Gray Leaf Spot (Cercospora zeae-maydis).</td>  
 		</tr>  
 		<tr>  
-			<td style="border: 1px solid #ddd; padding: 10px;">ferrugem</td>  
-			<td style="border: 1px solid #ddd; padding: 10px;">Ferrugem do Milho (Puccinia sorghi ou Puccinia polysora).</td>  
+			<td style="border: 1px solid #ddd; padding: 10px;">rust</td>  
+			<td style="border: 1px solid #ddd; padding: 10px;">Corn Rust (Puccinia sorghi or Puccinia polysora).</td>  
 		</tr>  
 		<tr style="background-color: #f9f9f9;">  
-			<td style="border: 1px solid #ddd; padding: 10px;">queima_do_norte</td>  
-			<td style="border: 1px solid #ddd; padding: 10px;">Queima do Norte (Exserohilum turcicum).</td>  
+			<td style="border: 1px solid #ddd; padding: 10px;">northern_leaf_blight</td>  
+			<td style="border: 1px solid #ddd; padding: 10px;">Northern Leaf Blight (Exserohilum turcicum).</td>  
 		</tr>  
 	</table>  
 </div>   
 
 ---
 
-
-### Estrutura do dataset
+### Dataset Structure
 
 ```
 datasets/
 ├── train/
-│   ├── saudavel/
-│   ├── cercospora/
-│   ├── ferrugem/
-│   └── queima_do_norte/
+│ ├── healthy/
+│ ├── cercospora/
+│ ├── rust/
+│ └── northern_leaf_blight/
 ├── val/
-│   ├── saudavel/
-│   ├── cercospora/
-│   ├── ferrugem/
-│   └── queima_do_norte/
+│ ├── healthy/
+│ ├── cercospora/
+│ ├── rust/
+│ └── northern_leaf_blight/
 ```
 
 ---
 
-### Distribuição do dataset
+### Dataset Distribution
 <p align="center">
- <img src="https://github.com/phaa/corn-diseases-detection/blob/main/dev/images/distribuicao.png" title="book" width="800" />
+ <img src="https://github.com/phaa/corn-diseases-detection/blob/main/dev/images/distribuicao.png" title="Dataset Distribution" width="800" />
 </p>
 
 ---
@@ -75,19 +74,35 @@ O modelo obteve **altíssima acurácia**, com excelente desempenho nas métricas
 
 ---
 
-## Técnicas Usadas
-**Ao longo do Jupyter notebook do projeto, deixo vários comentários com insights e comentários a sobre das técnicas e metodologias utilizadas e como elas impactam a solução.**
+## Results
 
-- VGG16 pré-treinada (ImageNet)
-- Fine-tuning das camadas finais
-- Data Augmentation com `ImageDataGenerator`
-- Pooling duplo (Average + Max)
-- Regularização L2 + BatchNormalization
-- Camadas de Atenção Densa
-- Grad-CAM para interpretação visual
-- Visualização com OpenCV e Matplotlib
+The model achieved **very high accuracy**, with excellent validation metrics. Confusion matrices and visual prediction examples were also generated to qualitatively evaluate the model.
 
-**Tecnologias principais:**
+### Validation Predictions
+<p align="center">
+ <img src="https://github.com/phaa/corn-diseases-detection/blob/main/dev/images/predicoes.png" title="Predictions" width="800" />
+</p>
+
+### Classification Report and Confusion Matrix 
+<p align="center">
+ <img src="https://github.com/phaa/corn-diseases-detection/blob/main/dev/images/resultados.png" title="Results" width="800" />
+</p>
+
+---
+
+## Techniques Used
+**Throughout the project notebook, I leave detailed insights and comments about the techniques and methodologies used and their impact on the solution.**
+
+- Pretrained VGG16 (ImageNet)
+- Fine-tuning of final layers
+- Data Augmentation with `ImageDataGenerator`
+- Dual Pooling (Average + Max)
+- L2 Regularization + BatchNormalization
+- Attention mechanism Layers
+- Grad-CAM for visual interpretation
+- Visualization with OpenCV and Matplotlib
+
+**Main technologies:**
 - TensorFlow
 - Keras
 - NumPy
@@ -97,43 +112,57 @@ O modelo obteve **altíssima acurácia**, com excelente desempenho nas métricas
 
 ---
 
-## ✅ Aplicações
-Esse projeto demonstra como a Visão Computacional aliada ao Deep Learning pode melhorar a produtividade, reduzir o uso de defensivos incorretamente e minimizar perdas por doenças.
+## Applications
+This project demonstrates how Computer Vision combined with Deep Learning can improve productivity, reduce incorrect pesticide usage, and minimize crop losses due to diseases.
 
-- Agricultura de Precisão
-- Monitoramento automatizado por drones
-- Prescrição de defensivos agrícolas corretos
-- Mitigar erros de diagnóstico por humanos
+- Precision Agriculture
+- Automated monitoring via drones
+- Prescription of correct agrochemicals
+- Mitigation of human diagnostic errors
 
 ---
 
+## Why is this project relevant for agriculture?
+The development of an automated plant disease classification system is highly relevant to agriculture due to several practical and economic reasons:
 
-## Como executar
+- Complexity of pathogen study: Fungi and bacteria affecting crops have complex life cycles with multiple stages that must be understood to manage diseases effectively.
+- Prevention and remediation: Proper disease management relies on prevention, which is more cost-effective and efficient than treatment after symptoms appear.
+- Reliable diagnostics: Farmers often face misdiagnoses, leading to trial-and-error treatment, increasing costs and risks.
+- Importance of early detection: Identifying diseases in their early stages is crucial to prevent progression and yield loss.
+- Avoiding phytotoxicity: Proper dosing (spray volume, droplet size, coverage proportion) is necessary to avoid damaging plants with agrochemicals.
+- Optimization of agrochemical use: Each curative application could often be replaced by preventive applications, improving sustainability and reducing expenses.
 
-### 1. Clone o repositório
+This system helps farmers identify diseases accurately and quickly, guiding appropriate interventions that save resources, reduce errors, and increase crop productivity.
+
+---
+
+## How to run
+
+### 1. Clone this repo
 
 ```bash
 git clone https://github.com/phaa/corn-diseases-detection.git
 cd corn-diseases-detection
 ```
 
-### 2. Inicie seu ambiente
+### 2. Activate your env
 
 ```bash
 conda activate env
 ```
 
-### 3. Abra o Jupyter lab
+### 3. Open Jupyter lab
 
 ```bash
 jupyter lab
 ```
 
-### 4. Execute o notebook
-Todas as dependencias são instaladas diretamente pelo notebook
+### 4. Run the notebook
 
-## Créditos
+All dependencies are installed directly via the notebook.
 
-Desenvolvido com ❤️ por <a href='https://www.linkedin.com/in/pedro-henrique-amorim-de-azevedo/' target='_blank'>Pedro Henrique Amorim de Azevedo</a>
+## Author
+
+Developed by <a href='https://www.linkedin.com/in/pedro-henrique-amorim-de-azevedo/' target='_blank'>Pedro Henrique Amorim de Azevedo</a>
 
 ---
