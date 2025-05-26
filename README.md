@@ -58,22 +58,6 @@ datasets/
 
 ---
 
-## Resultados
-
-O modelo obteve **altíssima acurácia**, com excelente desempenho nas métricas de validação. Também foram geradas **matrizes de confusão** e **exemplos visuais preditivos** para avaliar qualitativamente o modelo.
-
-### Predições de validação
-<p align="center">
- <img src="https://github.com/phaa/corn-diseases-detection/blob/main/dev/images/predicoes.png" title="book" width="800" />
-</p>
-
-### Relatório de classificação e matriz de confusão 
-<p align="center">
- <img src="https://github.com/phaa/corn-diseases-detection/blob/main/dev/images/resultados.png" title="book" width="800" />
-</p>
-
----
-
 ## Results
 
 The model achieved **very high accuracy**, with excellent validation metrics. Confusion matrices and visual prediction examples were also generated to qualitatively evaluate the model.
